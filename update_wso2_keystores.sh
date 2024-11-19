@@ -67,10 +67,10 @@ echo "Importing the new certificate into the keystore..."
 keytool -import -keystore "$KEYSTORE" -storepass "$PASSWORD" -file "$NEW_CERT" -alias "$ALIAS" -noprompt
 
 # Verify the new certificate
-echo "\n\n=============================================================================="
+echo "=============================================================================="
 echo "Verifying the new certificate in the keystore..."
 keytool -list -v -keystore "$KEYSTORE" -storepass "$PASSWORD" -alias "$ALIAS"
-echo "==============================================================================\n\n"
+echo "=============================================================================="
 
 # Extract the public key
 echo "Extracting public key..."
